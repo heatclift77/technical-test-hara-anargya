@@ -1,7 +1,7 @@
-import { createApp } from "vue";
+import { createApp } from "vue/dist/vue.esm-bundler";
 import "./style.css";
 import "../src/assets/css/index.css";
 import App from "./App.vue";
 import { Icon } from "@iconify/vue";
-
-createApp(App).component("Icon", Icon).mount("#app");
+import router from './router';
+createApp(App).component("Icon", Icon).use(router).mount("#app")
